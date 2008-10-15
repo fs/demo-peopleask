@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>People Ask</title>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <link href="/stylesheets/reset.css?1213210788" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/custom.css?1213210788" media="screen" rel="stylesheet" type="text/css" />
+        <script src="/javascripts/defaults.js?1224073142" type="text/javascript"></script>
+        <script type="text/javascript">
+//<![CDATA[
+
+    Event.observe(window, 'load', function() {
+        $('question_submit').click();
+    });
+
+//]]>
+</script>
+    </head>
+    <body>
+        <div class="logo"><a href="/"><img alt="Logo" src="/images/logo.gif?1213210788" /></a></div>
+
+
+
+<div class="form">
+    <form action="/questions.js" class="new_question" id="new_question" method="post" onsubmit="new Ajax.Request('/questions.js', {asynchronous:true, evalScripts:true, onComplete:function(request){js.question.complete()}, onLoading:function(request){js.question.loading()}, parameters:Form.serialize(this)}); return false;"><div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="26ae33b9cd752b1e6f7259e4e0e7d89df97a4a7f" /></div>
+        
+        <input class="input" id="question_question" name="question[question]" size="30" type="text" value="Кто" />
+        <input id="question_submit" name="commit" type="submit" value="Что ищут?" />
+    </form>
+</div>
+
+<div class="suggest">
+    <img alt="Indicator_verybig" id="question_spinner" src="/images/indicator_verybig.gif?1213210788" />
+    <div id="suggest"></div>
+</div>
+
+<div class="questions">
+    
+        <a class="question-0" href="#" onclick="try {
+$(&quot;question_question&quot;).value = &quot;\u0427\u0442\u043e \u0431\u0443\u0434\u0435\u0442 \u0435\u0441\u043b\u0438?&quot;;
+$(&quot;question_submit&quot;).click();
+} catch (e) { alert('RJS error:\n\n' + e.toString()); alert('$(\&quot;question_question\&quot;).value = \&quot;\\u0427\\u0442\\u043e \\u0431\\u0443\\u0434\\u0435\\u0442 \\u0435\\u0441\\u043b\\u0438?\&quot;;\n$(\&quot;question_submit\&quot;).click();'); throw e }; return false;">Что будет если?</a><br />
+    
+        <a class="question-1" href="#" onclick="try {
+$(&quot;question_question&quot;).value = &quot;\u041a\u0442\u043e?&quot;;
+$(&quot;question_submit&quot;).click();
+} catch (e) { alert('RJS error:\n\n' + e.toString()); alert('$(\&quot;question_question\&quot;).value = \&quot;\\u041a\\u0442\\u043e?\&quot;;\n$(\&quot;question_submit\&quot;).click();'); throw e }; return false;">Кто?</a><br />
+    
+        <a class="question-2" href="#" onclick="try {
+$(&quot;question_question&quot;).value = &quot;\u0413\u0434\u0435?&quot;;
+$(&quot;question_submit&quot;).click();
+} catch (e) { alert('RJS error:\n\n' + e.toString()); alert('$(\&quot;question_question\&quot;).value = \&quot;\\u0413\\u0434\\u0435?\&quot;;\n$(\&quot;question_submit\&quot;).click();'); throw e }; return false;">Где?</a><br />
+    
+        <a class="question-3" href="#" onclick="try {
+$(&quot;question_question&quot;).value = &quot;\u041a\u0443\u0434\u0430?&quot;;
+$(&quot;question_submit&quot;).click();
+} catch (e) { alert('RJS error:\n\n' + e.toString()); alert('$(\&quot;question_question\&quot;).value = \&quot;\\u041a\\u0443\\u0434\\u0430?\&quot;;\n$(\&quot;question_submit\&quot;).click();'); throw e }; return false;">Куда?</a><br />
+    
+</div>
+    </body>
+</html>
