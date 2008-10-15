@@ -1,9 +1,5 @@
 begin
-    require 'vlad'
-
-    Vlad.load(
-	:scm    => :git,
-        :web    => nil
-    )
-rescue LoadError    
+  require 'vlad'
+  Vlad.load
+rescue LoadError
 end
