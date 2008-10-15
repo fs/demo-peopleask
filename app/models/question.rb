@@ -12,7 +12,7 @@ class Question < ActiveRecord::BaseWithoutTable
         private
         
         def default_questions
-            @default_questions ||= YAML.load_config(RAILS_ROOT + "/db/yml/config/questions.yml")
+            @default_questions ||= YAML.load(File.read(Rails.root + "/config/questions.yml"))
         end
         
         def find_all
