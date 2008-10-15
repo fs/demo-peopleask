@@ -17,7 +17,7 @@ class QuestionsController < ApplicationController
   end
   
   def cache_path
-    'question/' + Digest::MD5.hexdigest(params[:question][:question] || '')
+    { :question => params[:question][:question] }
   end    
   
   public
