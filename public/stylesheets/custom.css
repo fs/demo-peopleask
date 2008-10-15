@@ -6,7 +6,7 @@ input           { display: none; }
 
 .input          { 
     font-family: "Georgia", Times New Roman, Trebuchet MS, Arial;
-    background: url(../images/input_bg.jpg) no-repeat top left; border: 0;
+    background: url(/images/input_bg.jpg) no-repeat top left; border: 0;
     height: 60px;
     width: 702px;
     padding: 25px 35px 20px 35px;
@@ -18,7 +18,7 @@ ul              { text-align: left; list-style-type: none;}
 ul li           { line-height: 1.7em; }
 
 .suggest        { 
-    background: url(../images/suggest_bg.jpg) repeat-x top left; 
+    background: url(/images/suggest_bg.jpg) repeat-x top left; 
     padding: 20px 23px; 
     height: 220px; 
     width: 616px; 
