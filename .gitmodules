@@ -1,3 +1,12 @@
 [submodule "vendor/rails"]
 	path = vendor/rails
 	url = git://github.com/fs/rails.git
+[submodule "vendor/plugins/rspec"]
+	path = vendor/plugins/rspec
+	url = git://github.com/fs/rspec.git
+[submodule "vendor/plugins/rspec-rails"]
+	path = vendor/plugins/rspec-rails
+	url = git://github.com/fs/rspec-rails.git
+[submodule "vendor/plugins/rspec-rails-matchers"]
+	path = vendor/plugins/rspec-rails-matchers
+	url = git://github.com/fs/rspec-on-rails-matchers.git
