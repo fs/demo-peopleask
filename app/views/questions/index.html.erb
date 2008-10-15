@@ -1,31 +1,31 @@
 <div class="logo"><%= link_to(image_tag('logo.gif'), '/') %></div>
 
 <% content_for :javascript do %>
-    Event.observe(window, 'load', function() {
-        $('question_submit').click();
-    });
+  Event.observe(window, 'load', function() {
+    $('question_submit').click();
+  });
 <% end %>
 
 <div class="form">
-    <% remote_form_for(
-        @question,
-        :url      => formatted_questions_path(:js),
-        :loading  => 'js.question.loading()',
-        :complete => 'js.question.complete()'
-    ) do |f| %>
-        
-        <%= f.text_field :question, :class => 'input' %>
-        <%= submit_tag 'Что ищут?', :id => 'question_submit' %>
-    <% end %>
+  <% remote_form_for(
+    @question,
+    :url      => formatted_questions_path(:js),
+    :loading  => 'js.question.loading()',
+    :complete => 'js.question.complete()'
+  ) do |f| %>
+  
+    <%= f.text_field :question, :class => 'input' %>
+    <%= submit_tag 'Что ищут?', :id => 'question_submit' %>
+  <% end %>
 </div>
 
 <div class="suggest">
-    <%= image_tag 'indicator_verybig.gif', :id => 'question_spinner' %>
-    <div id="suggest"></div>
+  <%= image_tag 'indicator_verybig.gif', :id => 'question_spinner' %>
+  <div id="suggest"></div>
 </div>
 
 <div class="questions">
-    <% @questions.each_with_index do |question, index| %>
-        <%= link_to_question(h(question.question + '?'), :class => "question-#{index}") %><br />
-    <% end %>
+  <% @questions.each_with_index do |question, index| %>
+    <%= link_to_question(h(question.question + '?'), :class => "question-#{index}") %><br />
+  <% end %>
 </div>
