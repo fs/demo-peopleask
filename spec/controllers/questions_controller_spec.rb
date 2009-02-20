@@ -31,5 +31,15 @@ describe QuestionsController do
       do_get
       assigns[:questions].should == [@question]
     end
+
+    it "should find random question" do
+      Question.should_receive(:find).with(:random)
+      do_get
+    end
+
+    it "should setup questio from params" do
+      get :index, :question => 'test'
+      assigns[:question].question.should == 'test'
+    end
   end
 end
