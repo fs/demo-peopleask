@@ -2,9 +2,6 @@ require 'digest/md5'
 
 class QuestionsController < ApplicationController
   
-  # disable csrf protection:
-  skip_before_filter :verify_authenticity_token, :only => [:create]
-  
   before_filter :build_question, :only => [:index, :create]
   
   caches_page :index
