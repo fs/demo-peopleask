@@ -1,5 +1,5 @@
 <% if @results.blank? %>
-    
+
   No data
 
 <% else %>
@@ -13,4 +13,8 @@
     <% end %>
   </ul>
 
+  <div class="short-link">
+    <%= link_to(question_url(:question => @question.question), question_url(:question => @question.question)) %>
+    <%= clippy(question_url(:question => @question.question), '#000000') %>
+  </div>
 <% end %>

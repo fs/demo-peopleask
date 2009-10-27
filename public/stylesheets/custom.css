@@ -25,11 +25,15 @@ ul li           { line-height: 1.7em; }
     margin: -3px auto 0 auto;
 }
 
+a, a:visited, a:active { font-family: Georgia; color: #fff; }
+
 div.questions a,
 div.questions a:visited,
 div.questions a:active
-                { position: absolute; font-family: Georgia; color: #fff; }
+                { position: absolute; }
 a.question-0    { top: 600px; left: 100px; font-size: 4.5em; }
 a.question-1    { top: 470px; left: 20px; font-size: 3.7em; }
 a.question-2    { top: 250px; right: 100px; font-size: 2.5em;}
 a.question-3    { top: 550px; right: 200px; font-size: 3em; }
+
+div.short-link { font-size: 0.8em; text-align: left; padding: 25px 0; }
