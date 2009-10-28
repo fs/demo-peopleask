@@ -53,9 +53,18 @@ class Question < ActiveRecord::BaseWithoutTable
         if  xml.include?('toplevel') &&
             !xml['toplevel'].blank? &&
             xml['toplevel'].include?('CompleteSuggestion')
-                
-          results = xml['toplevel']['CompleteSuggestion']
-          results = [results] unless results.is_a?(Array)
+
+          items = xml['toplevel']['CompleteSuggestion'].is_a?(Array) ?
+            xml['toplevel']['CompleteSuggestion'] :
+            [xml['toplevel']['CompleteSuggestion']]
+
+          results = returning([]) do |values|
+            items.each {|item| values << [item['suggestion']['data'], item['num_queries']['int'].to_i] }
+          end.sort {|x,y| y[1] <=> x[1] }
+
+          Rails.logger.debug(results.inspect)
+
+          results
         end
       end
                     

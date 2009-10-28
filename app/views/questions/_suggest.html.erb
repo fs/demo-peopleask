@@ -7,8 +7,8 @@
   <ul>
     <% for result in @results %>
       <li>
-        <%=h result["suggestion"]["data"] %>
-        | <%=number_with_delimiter result["num_queries"]['int'] %>
+        <%=h result[0] %>
+        | <%=number_with_delimiter result[1] %>
       </li>
     <% end %>
   </ul>
